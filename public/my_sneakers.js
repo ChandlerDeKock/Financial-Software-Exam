@@ -129,3 +129,7 @@ $(port1).click(function(){
    $(date1).html("Date of purchase: " + sneakers[0].Date);
    $(price1).html("Purchase price  " + "R " + sneakers[0].Price);
 });
+
+for (var i = 0 ; sneakers.length ; i++){
+   
+};
