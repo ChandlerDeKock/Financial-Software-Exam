@@ -1,3 +1,4 @@
+//importing the JSON file
 var sneakers = [
     {
        "Brand": "Nike",
@@ -120,4 +121,11 @@ var sneakers = [
     }
 ];
 
-$(h1).html
+//creating the html elements from the sneakers database
+$(port1).click(function(){
+   $(brand1).html(sneakers[0].Brand);
+   $(style1).html( "Style: "  + sneakers[0].Style);
+   $(colour1).html("Colour: " + sneakers[0].Color);
+   $(date1).html("Date of purchase: " + sneakers[0].Date);
+   $(price1).html("Purchase price  " + "R " + sneakers[0].Price);
+});
