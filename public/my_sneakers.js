@@ -121,15 +121,18 @@ var sneakers = [
     }
 ];
 
-//creating the html elements from the sneakers database
-$(port1).click(function(){
-   $(brand1).html(sneakers[0].Brand);
-   $(style1).html( "Style: "  + sneakers[0].Style);
-   $(colour1).html("Colour: " + sneakers[0].Color);
-   $(date1).html("Date of purchase: " + sneakers[0].Date);
-   $(price1).html("Purchase price  " + "R " + sneakers[0].Price);
-});
 
-for (var i = 0 ; sneakers.length ; i++){
-   
-};
+   for (i = 0; i < sneakers.length; i++){
+      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'brand" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/cabin.png' alt=''>     </div >     <h2 class='page-section-heading text-center text-uppercase text-secondary mb-0' id = 'brand" + i +"'></h2>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>      <li class='mb-5' id = 'price" + i +"'></li>       </div> ")
+
+      $("#brand" + i).html(sneakers[i].Brand);
+      $("#style" + i).html( "Style: "  + sneakers[i].Style);
+      $("#colour" + i).html("Colour: " + sneakers[i].Color);
+      $("#date" + i).html("Date of purchase: " + sneakers[i].Date);
+      $("#price" + i).html("Purchase price  " + "R " + sneakers[i].Price);
+   }
+
+   $("#sendMessageButton").click(function(){
+      console.log("clicked butto")
+
+   })
