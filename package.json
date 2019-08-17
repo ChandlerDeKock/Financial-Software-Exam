@@ -35,6 +35,7 @@
         "jquery.easing": "^1.4.1",
         "magnific-popup": "^1.1.0",
         "pg": "^7.12.1",
+        "require": "^2.4.20",
         "save": "^2.4.0"
     },
     "devDependencies": {

@@ -122,6 +122,7 @@ var sneakers = [
 ];
 
 
+function addshoes (){
    for (i = 0; i < sneakers.length; i++){
       $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'brand" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/cabin.png' alt=''>     </div >     <h2 class='page-section-heading text-center text-uppercase text-secondary mb-0' id = 'brand" + i +"'></h2>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>      <li class='mb-5' id = 'price" + i +"'></li>       </div> ")
 
@@ -131,8 +132,38 @@ var sneakers = [
       $("#date" + i).html("Date of purchase: " + sneakers[i].Date);
       $("#price" + i).html("Purchase price  " + "R " + sneakers[i].Price);
    }
+}
+addshoes()
+   function addNewShoe(){
+      var newbrand = $("#brandinput").val()
+      var newstyle = $("#styleinput").val()
+      var newcolor = $("#colourinput").val()
+      var newprice = $("#priceinput").val()
+      var newdate = $("#dateinput").val()
+      var tobeadded = {       
+      "Brand": newbrand,
+      "Style": newstyle,
+      "Color": newcolor,
+      "Date": newprice,
+      "Price": newdate}
+      sneakers.push(tobeadded)
+      
+      var i = sneakers.length 
+      console.log(tobeadded, i)
+      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'brand" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/cabin.png' alt=''>     </div >     <h2 class='page-section-heading text-center text-uppercase text-secondary mb-0' id = 'brand" + i +"'></h2>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>      <li class='mb-5' id = 'price" + i +"'></li>       </div> ")
+      var i = sneakers.length 
+      $("#brand" + i).html(newbrand);
+      $("#style" + i).html( "Style: "  + newstyle);
+      $("#colour" + i).html("Colour: " + newcolor);
+      $("#date" + i).html("Date of purchase: " + newprice);
+      $("#price" + i).html("Purchase price  " + "R " + newdate);
+   }
 
-   $("#sendMessageButton").click(function(){
-      console.log("clicked butto")
-
-   })
+   function render (){
+      var i = sneakers.length 
+      $("#brand" + i).html(newbrand);
+      $("#style" + i).html( "Style: "  + newstyle);
+      $("#colour" + i).html("Colour: " + newcolor);
+      $("#date" + i).html("Date of purchase: " + snewprice);
+      $("#price" + i).html("Purchase price  " + "R " + newdate);
+   }
