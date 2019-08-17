@@ -120,7 +120,7 @@ var sneakers = [
        "Price": "1300"
     }
 ];
-
+var sneakers1 = Cookies.set("sneakers", sneakers)
 
 function addshoes (){
    for (i = 0; i < sneakers.length; i++){
@@ -157,6 +157,8 @@ addshoes()
       $("#colour" + i).html("Colour: " + newcolor);
       $("#date" + i).html("Date of purchase: " + newprice);
       $("#price" + i).html("Purchase price  " + "R " + newdate);
+      alert("You have just added a shoe to your collection. Go check it out!")
+      Cookies.set(tobeadded);
    }
 
    function render (){

@@ -39,7 +39,7 @@
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Add Shoes</a>
           </li>
         </ul>
       </div>
@@ -149,7 +149,7 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-          <form name="sentMessage" onsubmit="addNewShoe();return false" >
+          <form name="sentMessage" onsubmit="addNewShoe();return false" href = "#portfolio" >
             <div class="control-group">
               <div class="form-group floating-label-form-group controls mb-0 pb-2">
                 <label>Brand</label>
@@ -188,7 +188,9 @@
             <br>
             <div id="success"></div>
             <div class="form-group">
-              <button class="btn btn-primary btn-xl" type = "submit" id="sendMessageButton">Add Shoe</button>
+              <a href = "#portfolio">
+              <button class="btn btn-primary btn-xl" type = "submit" href = "#portfolio" id="sendMessageButton">Add Shoe</button>
+              </a>  
             </div>
           </form>
         </div>
@@ -251,6 +253,7 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script
 
   <!-- Contact Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
