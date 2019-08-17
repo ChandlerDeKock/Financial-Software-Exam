@@ -121,6 +121,7 @@ var sneakers = [
     }
 ];
 var sneakers1 = Cookies.set("sneakers", sneakers)
+var sneak = require("./public/my_sneakers.json")
 
 function addshoes (){
    for (i = 0; i < sneakers.length; i++){
