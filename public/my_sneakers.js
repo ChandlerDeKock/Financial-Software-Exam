@@ -128,4 +128,18 @@ $(port1).click(function(){
    $(colour1).html("Colour: " + sneakers[0].Color);
    $(date1).html("Date of purchase: " + sneakers[0].Date);
    $(price1).html("Purchase price  " + "R " + sneakers[0].Price);
+<<<<<<< Updated upstream
 });
+=======
+});
+
+<<<<<<< Updated upstream
+for (var i = 0 ; sneakers.length ; i++){
+   
+};
+=======
+// for (var i = 0 ; sneakers.length ; i++){
+   
+// };
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
