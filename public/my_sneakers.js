@@ -123,13 +123,13 @@ var sneakers = [
 
 function addshoes (){
    for (i = 0; i < sneakers.length; i++){
-      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'price" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/cabin.png' alt=''>     </div >     <p class='page-section-heading text-center text-uppercase text-secondary mb-5' id = 'brand" + i +"'></p>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>           </div> ")
+      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'price" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/Shoe" + i +".png' alt=''>     </div >     <p class='page-section-heading text-center text-uppercase text-secondary mb-5' id = 'brand" + i +"'></p>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>           </div> ")
 
       $("#brand" + i).html(sneakers[i].Brand);
       $("#style" + i).html( "Style: "  + sneakers[i].Style);
       $("#colour" + i).html("Colour: " + sneakers[i].Color);
       $("#date" + i).html("Date of purchase: " + sneakers[i].Date);
-      $("#price" + i).html("Purchase price  " + "R " + sneakers[i].Price);
+      $("#price" + i).html( "R " + sneakers[i].Price);
    }
 }
 addshoes()
@@ -149,7 +149,7 @@ addshoes()
       
       var i = sneakers.length 
       console.log(tobeadded, i)
-      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'price" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/cabin.png' alt=''>     </div >     <p class='page-section-heading text-center text-uppercase text-secondary mb-5' id = 'brand" + i +"'></p>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>           </div> ")
+      $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'price" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/Shoe" + i +".png' alt=''>     </div >     <p class='page-section-heading text-center text-uppercase text-secondary mb-5' id = 'brand" + i +"'></p>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>           </div> ")
       var i = sneakers.length 
       $("#brand" + i).html(newbrand);
       $("#style" + i).html( "Style: "  + newstyle);
