@@ -120,7 +120,7 @@ var sneakers = [
        "Price": "1300"
     }
 ];
-
+var newSneaker = []
 function addshoes (){
    for (i = 0; i < sneakers.length; i++){
       $("#griditem").append("    <div class='col-md-6 col-lg-4' id = 'port1'>      <div class='portfolio-item mx-auto' data-toggle='modal' data-target='#portfolioModal1'>        <div class='portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100'>          <div >            <i class='fas fa-plus fa-3x'></i>          </div>          <h2 class='portfolio-modal-title text-secondary text-uppercase mb-0' id = 'price" + i +"'></h2>        </div>        <img class='img-fluid' src='img/portfolio/Shoe" + i +".png' alt=''>     </div >     <p class='page-section-heading text-center text-uppercase text-secondary mb-5' id = 'brand" + i +"'></p>      <li class='mb-5' id = 'style" + i +"'></li>      <li class='mb-5' id = 'colour" + i +"'></li>      <li class='mb-5' id = 'date" + i +"'></li>           </div> ")
@@ -132,7 +132,7 @@ function addshoes (){
       $("#price" + i).html( "R " + sneakers[i].Price);
    }
 }
-addshoes()
+
    function addNewShoe(){
       var newbrand = $("#brandinput").val()
       var newstyle = $("#styleinput").val()
@@ -145,6 +145,9 @@ addshoes()
       "Color": newcolor,
       "Date": newdate,
       "Price": newprice}
+   
+      newSneaker.push(tobeadded)
+      localStorage.setItem('newsneaker', JSON.stringify(newSneaker))
       sneakers.push(tobeadded)
       
       var i = sneakers.length 
@@ -156,15 +159,18 @@ addshoes()
       $("#colour" + i).html("Colour: " + newcolor);
       $("#date" + i).html("Date of purchase: " + newdate);
       $("#price" + i).html("Price  " + "R " + newprice);
-      alert("You have just added a shoe to your collection. Go check it out!")
-      Cookies.set(tobeadded);
    }
 
    function render (){
-      var i = sneakers.length 
-      $("#brand" + i).html(newbrand);
-      $("#style" + i).html( "Style: "  + newstyle);
-      $("#colour" + i).html("Colour: " + newcolor);
-      $("#date" + i).html("Date of purchase: " + newdate);
-      $("#price" + i).html("Price  " + "R " + newprice);
+
+      var retrievedObject = localStorage.getItem('newsneaker');
+      if(!retrievedObject){return}
+      console.log('retrievedObject: ', JSON.parse(retrievedObject));
+      newSneaker = JSON.parse(retrievedObject);
+      // sneakers.push(a);
+
+      sneakers = [...sneakers, ...newSneaker];
+
    }
+   render();
+   addshoes()
